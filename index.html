@@ -20,23 +20,26 @@
 
 	<title>Explain That Idea</title>
 	
-	<link href='css/style.css' rel='stylesheet' type='text/css'>	
+	<link href='./css/style.css' rel='stylesheet' type='text/css'>	
 
 </head>
 <body>
 	
 <div id="wtf">
-  	<div id="so" class="fuck">Blank Stares Again? Explain That Idea!</div>
+  	<div id="so" class="fuck">EXPLAIN THAT SHIT</div>
   	<div id="frames">
   	  <!-- frames here -->
   	</div>
 </div>
 <div id="share" class="clearfix">
 		<div class="wrap">
+		<div id="copyright_box">
+		&copy; 2012 <a href="#">Common Craft LLC</a> | <a href="#">PG Version</a>
+		</div>
 		<div id="links">
-			<a href="http://www.artofexplanation.com">Check out the Art of Explanation book </a>
-			<!-- | <a href="" id="linkToThis">link to this</a> -->
-            | <a href="http://explainthatshit.com" id="cleanVersion">Non-PG version</a>
+			<img src="images/book-cover.png" alt="The Art of Explanation"> 
+			<span>More shit explained!</span>
+			<a href="#">Buy the book</a>
 		</div>
 	</div>
 </div>
@@ -47,12 +50,13 @@
 
 <script type="text/html" id="frame_template">
   <div class="frame future">
-    <div class="text">{{text}}</div>
+    <div class="text"><img src="images/guy-with-bulb.png" alt="Guy With Bulb">{{text}} 
+    </div>
     <div class="footnote"><a href="{{footnote}}">{{footnote}}</a></div>
     <div class="bfd">
   		<a href="javascript:void(0);" class="quip">{{quip}}</a>
   	</div>
-  </div>
+  </div>s
 </script>
 
 <script type="text/javascript">

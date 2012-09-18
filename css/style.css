@@ -197,6 +197,7 @@ body {
 
 #frames div.frame div.text img {
 	float: right;
+	margin-top: -20px ;
 }
 
 /* line 87, ../scss/style.scss */
@@ -276,6 +277,7 @@ body {
 	display: block;
 	margin-left: 30px;
 	margin-top: 50px;
+	padding-bottom: 5px;
 	width: 250px;
 }
 
@@ -367,5 +369,10 @@ body {
   }
 }
 
+
+.fuck_subtitle {
+	font-size: 25px;
+	text-transform: lowercase;
+}
 
 

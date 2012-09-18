@@ -116,7 +116,9 @@ body {
 /* line 73, ../scss/style.scss */
 #frames {
   position: relative;
-  width: 100%;
+  width: 900px;
+  margin: 0 auto;
+  
 }
 /* line 268, ../scss/lib/_mixins.scss */
 #frames .frame {
@@ -160,7 +162,7 @@ body {
   -webkit-transition: -webkit-transform .3s ease-in-out, opacity .3s ease-in-out;
   -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.5s ease-in-out;
   -moz-transition: -moz-transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.5s ease-in-out;
-  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.5s ease-in-out;
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.5s ease-in-out;*/
 }
 /* line 295, ../scss/lib/_mixins.scss */
 .csstransforms3d #frames .frame.future {

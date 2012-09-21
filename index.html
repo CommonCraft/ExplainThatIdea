@@ -140,7 +140,9 @@ var text = [];
   text[55] = "Explanations aren't enough. If you want to really shine, find ways to make them remarkable.";
 
    
-  
+var subtitles =[];
+    subtitles[0] = "Testing 1";
+    subtitles[1] = "Testing 2";  
   
 var footnotes = [];
 
@@ -183,6 +185,8 @@ $(function(){
 			  $old.remove();
 			}, 600);
 		}, 200);
+
+    $('.fuck_subtitle').text(subtitles[Math.floor(Math.random()*subtitles.length)]);
 
     cursor = (cursor >= text.length -1) ? 1 : cursor + 1;
   }

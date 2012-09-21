@@ -40,12 +40,12 @@
 
 	<div id="links">
 			<img src="images/book-cover.png" alt="The Art of Explanation"> 
-			<span>More shit explained!</span>
+			<span>More ideas explained!</span>
 			<a href="#">Buy the book</a>
 		</div>
 		<div class="wrap">
 		<div id="copyright_box">
-		&copy; 2012 <a href="#">Common Craft LLC</a> | <a href="#">PG Version</a> &nbsp; Share This! &nbsp;<a href="http://twitter.com/intent/tweet?url=http://explainthatshit.com&text=I love the Explain that Idea Website!&via=explainthatshit" target="_blank""><img src="images/twitter.png" alt="Twitter"></a> <a href="#"><img src="images/facebook.png" alt="Facebook"></a> <a href="#"><img src="images/g.png" alt="G"></a> <a href="#"><img src="images/amazon.png" alt="Get it on Amazon"></a>
+		&copy; 2012 <a href="#">Common Craft LLC</a> | <a href="#">PG Version</a> &nbsp; Share This! &nbsp;<a href="http://twitter.com/intent/tweet?url=http://explainthatshit.com&text=I love the Explain that Idea Website!&via=explainthatshit" target="_blank" id="twitter_link"><img src="images/twitter.png" alt="Twitter"></a> <a href="#"><img src="images/facebook.png" alt="Facebook"></a> <a href="#"><img src="images/g.png" alt="G"></a> <a href="#"><img src="images/amazon.png" alt="Get it on Amazon"></a>
 		</div>
 		
 	
@@ -67,8 +67,17 @@
     <div class="bfd">
   		<a href="javascript:void(0);" class="quip">{{quip}}</a>
   	</div>
-  </div>s
+  </div>
 </script>
+
+<script>
+$("#twitter_link").on('click',function(){
+	newlink = 'http://twitter.com/intent/tweet?url=http://explainthatshit.com&text='
+	newlink += encodeURIComponent($('.text').text())
+	newlink += '&via=explainthatshit'
+	$(this).attr('href', newlink)
+});
+</script>	
 
 <script type="text/javascript">
   

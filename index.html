@@ -24,7 +24,14 @@
 
 </head>
 <body>
-	
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=126428630780360";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>		
 <div id="wtf">
   	<div id="so" class="fuck">
   	<strong class="fuck_subtitle">Still Don't Understand?</strong><br/>
@@ -33,7 +40,11 @@
   	<br/>
   	<div id="frames">
   	  <!-- frames here -->
+  	  
+  	<br/>
+  	<div id="share_this">Share This! &nbsp;<a href="http://twitter.com/explainthatidea" target="_blank" id="twitter_link"><img src="images/twitter.png" alt="Twitter"></a> <div class="fb-like" data-href="http://facebook.com/artofexplanation" data-send="true" data-layout="button_count" data-width="100" data-show-faces="false" data-font="lucida grande"></div><!--<a href="#" id="facebook_link"><img src="images/facebook.png" alt="Facebook"></a> <!-- <a href="#"><img src="images/g.png" alt="G"></a> <a href="#"><img src="images/amazon.png" alt="Get it on Amazon"></a> --></div>
   	</div>
+  	
 </div>
 
 
@@ -67,8 +78,6 @@
     <div class="bfd">
   		<a href="javascript:void(0);" class="quip">{{quip}}</a>
   	</div>
-  	<br/>
-  	<div id="share_this">Share This! &nbsp;<a href="http://twitter.com/intent/tweet?url=http://explainthatshit.com&text=I love the Explain that Idea Website!&via=explainthatshit" target="_blank" id="twitter_link"><img src="images/twitter.png" alt="Twitter"></a> <a href="#" id="facebook_link"><img src="images/facebook.png" alt="Facebook"></a> <!-- <a href="#"><img src="images/g.png" alt="G"></a> <a href="#"><img src="images/amazon.png" alt="Get it on Amazon"></a> --></div>
   </div>
 </script>
 

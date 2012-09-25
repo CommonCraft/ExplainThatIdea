@@ -378,7 +378,9 @@ body {
 }
 
 #share_this {
+	width: 850px;
 	color: #000;
+	margin-top: 320px;
 }
 
 

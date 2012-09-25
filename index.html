@@ -35,8 +35,8 @@
 }(document, 'script', 'facebook-jssdk'));</script>		
 <div id="wtf">
   	<div id="so" class="fuck">
-  	<strong class="fuck_subtitle">Still Don't Understand?</strong><br/>
-  	EXPLAIN THAT IDEA      	
+  	<strong class="fuck_subtitle">Still Don't Understand?</strong><!--<br/>
+  	EXPLAIN THAT IDEA      -->
   	</div>
   	<br/>
   	<div id="frames">
@@ -86,7 +86,7 @@
 $("#twitter_link").on('click',function(){
 	newlink = 'http://twitter.com/intent/tweet?url=http://bit.ly/cceti&text=\"'
 	newlink += encodeURIComponent($('.text').text().trim())
-	newlink += '\" - via: '
+	newlink += '\" via: '
 	$(this).attr('href', newlink)
 });
 

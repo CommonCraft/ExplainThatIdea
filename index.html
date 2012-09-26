@@ -93,7 +93,7 @@ $("#twitter_link").on('click',function(){
 $("#facebook_link").on('click',function(){
 	newlink = 'http://www.facebook.com/sharer.php?u=http://www.explainthatidea.com&t='
 	newlink += encodeURIComponent($('.text').text().trim())
-	newlink += '\" - via: '
+	newlink += '\" via: '
 	$(this).attr('href', newlink)
 });
 </script>	

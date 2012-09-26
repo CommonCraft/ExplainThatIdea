@@ -238,7 +238,7 @@ body {
 
 /* line 96, ../scss/style.scss */
 .text {
-   font-family: 'SofiaProLightRegular';
+  font-family: 'SofiaProLightRegular';
   display: block;
   line-height: 48px;
   padding: 40px 20px 10px 20px;
@@ -373,7 +373,7 @@ body {
 
 
 .fuck_subtitle {
-	/*font-size: 30px;
+	/*font-size: 25px;
 	text-transform: lowercase;*/
 }
 
@@ -389,10 +389,11 @@ div.fb-like  {
 	display: inline-block;
 	height: 20px;
 	float: right;
-	margin-top: -25px;
+	margin-left: -60px;
 }
 
 #frames div.frame div.text img {
 	margin-left: 15px;
 }
+
 

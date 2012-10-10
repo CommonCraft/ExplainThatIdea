@@ -19,14 +19,14 @@
 
 
 	<title>Explain That Idea</title>
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	<link href='./css/style.css' rel='stylesheet' type='text/css'>
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="ets_favicon.ico" />	
 
 </head>
 <body>
 
-<div id="the_container">
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -35,6 +35,11 @@
   js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=126428630780360";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>		
+
+<div class="wrapper">
+  
+<div class="shell">
+
 <div id="wtf">
   	<div id="so" class="fuck">
   	<strong class="fuck_subtitle">Still Don't Understand?</strong><!--<br/>
@@ -44,35 +49,40 @@
   	<div id="frames">
   	  <!-- frames here -->
   	  
-  	<br/>
-  	<div id="share_this">Share This! &nbsp;<a href="http://twitter.com/explainthatidea" target="_blank" id="twitter_link"><img src="images/twitter.png" alt="Twitter"></a> <div id="fb-adjust"><div class="fb-like" data-href="http://facebook.com/artofexplanation" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="lucida grande"></div></div><!--<a href="#" id="facebook_link"><img src="images/facebook.png" alt="Facebook"></a> <!-- <a href="#"><img src="images/g.png" alt="G"></a> <a href="#"><img src="images/amazon.png" alt="Get it on Amazon"></a> --></div>
   	</div>
   	
   	
+  	
+  	
 </div>
+ </div>
+  <div id="share_this">Share This! &nbsp;<a href="http://twitter.com/explainthatidea" target="_blank" id="twitter_link"><img src="images/twitter.png" alt="Twitter"/></a> <div id="fb-adjust"><div class="fb-like" data-href="http://facebook.com/artofexplanation" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="lucida grande"></div></div><!--<a href="#" id="facebook_link"><img src="images/facebook.png" alt="Facebook"></a> <!-- <a href="#"><img src="images/g.png" alt="G"></a> <a href="#"><img src="images/amazon.png" alt="Get it on Amazon"></a> --></div>
+  <div class="push">
+  </div>
+</div>
+<!-- end wrapper -->
 
-
-<div id="share" class="clearfix">
-
-	<div id="links">
-			<a href="http://artofexplanation.com/book/art-of-explanation-buy"><img src="images/book-cover.png" alt="The Art of Explanation"></a>
-			<span>Want more?</span>
-			<a href="http://artofexplanation.com/book/art-of-explanation-buy" id="buy_more">Buy the book</a>
-		</div>
-		<div class="wrap">
-		<div id="copyright_box">
-		&copy; 2012 <a href="http://www.commoncraft.com/">Common Craft</a> | <a href="http://bit.ly/ccets">NSFW Version</a> &nbsp; </div>
-		
-	
-		
-	</div>
+<div class="footer">
+  <div id="share" class="clearfix">
+    	<div id="links">
+  			<a href="http://artofexplanation.com/book/art-of-explanation-buy"><img src="images/book-cover.png" alt="The Art of Explanation"/></a>
+  			<span>Want more?</span>
+  			<a href="http://artofexplanation.com/book/art-of-explanation-buy" id="buy_more">Buy the book</a>
+        <span class="right-copy">&copy; 2012 Common Craft | <a href="#">NSFW Version</a></span>
+  		</div>
+  		<div class="wrap">
+    		<div id="copyright_box">
+    		&copy; 2012 <a href="http://www.commoncraft.com/">Common Craft</a> | <a href="http://bit.ly/ccets">NSFW Version</a> &nbsp; </div>
+    	</div>
+  </div>
 </div>
 
 
 <script src="jquery-1.8.1.min.js"></script>
 <script src="mustache.js"></script>
 <script src="modernizr.js"></script>
-
+<script type="text/javascript" src="jquery.touchSwipe.min.js"></script>
+<script type="text/javascript" src="functions.js"></script>
 
 <script type="text/html" id="frame_template">
   <div class="frame future">

@@ -451,11 +451,12 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */ }
     margin: 0 auto 0; /* the bottom margin is the negative value of the footer's height */
   }
   #links { float:left;  display:block; margin-left:50px; }
+  #frames div.frame div.text img {  width:100px; float:right; display:none;   } 
 }
 
 
 @media screen and (max-width: 320px) { 
-  #frames div.frame div.text img {  width:100px; float:right; display:inline;   } 
+  #frames div.frame div.text img {  width:100px; float:right; display:none;   } 
   .fuck_subtitle { font-size:22px !important;  }
   #share_this { margin-left:-40px !important; position:relative; }
   #so.fuck { margin-bottom:0; } 

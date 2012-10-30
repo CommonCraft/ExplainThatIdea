@@ -401,6 +401,10 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */ }
 
 .right-copy { display:none !important; font-size:10px; top:-7px; position:relative;   }
 
+.fuck_subtitle_smaller {
+	font-size: 30px;
+	display: none;
+}
 
 @media screen and (max-width: 900px)  { 
      #frames .left-corner, #frames .right-corner { display:none; } 
@@ -425,6 +429,8 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */ }
    #links { margin-top:0;  }
    #links img {width:75px; height:auto; margin-top:-15px; position:relative;   }
    #buy_more { margin-right:20px !important; position:relative; margin-top:11px;  }
+   .fuck_subtitle_smaller { display: block; }
+   .fuck_subtitle { display: none; }
 }
 
 

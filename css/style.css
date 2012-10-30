@@ -423,7 +423,7 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */ }
 
 @media screen and (max-width: 640px) { 
    #frames div.frame div.text { text-align:left; line-height:24px;  }
-   #so.fuck { margin-bottom:10px;  }
+   #so.fuck { margin-bottom:0px; padding-top:15px; height: 27px; }
    #copyright_box { font-size:10px !important; display:block !important;  }
    #links span { display:none;  }
    #links { margin-top:0;  }

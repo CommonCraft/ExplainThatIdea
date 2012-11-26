@@ -482,4 +482,10 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */ }
   #links { float:left;  display:block; margin-left:30px;  }
 }
 
+@media screen and (max-height: 720px) {
+	
+.footer, .push { height: 110px !important; }
+#share { height: 110px !important;}
+
+}
 

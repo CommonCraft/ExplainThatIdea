@@ -484,8 +484,8 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */ }
 
 @media screen and (max-height: 720px) {
 	
-.footer, .push { height: 110px !important; }
-#share { height: 110px !important;}
+.footer, .push { height: 170px !important; }
+#share { height: 170px !important;}
 
 }
 

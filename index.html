@@ -5,7 +5,8 @@
 
 
 	<!--
-	Note from: 1:34
+	note: edited 1:33pm
+
 	#############################################################
 
 	Original code from:
@@ -25,8 +26,6 @@
 
 </head>
 <body>
-
-
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -35,49 +34,51 @@
   js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=126428630780360";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-
 <div class="wrapper">
 
 <div class="shell">
 
-<div id="wtf">
-  	<div id="so" class="fuck">
-  	<strong class="fuck_subtitle_smaller">Blank Stares Again?</strong>
-  	<strong class="fuck_subtitle">Still Don't Understand?</strong><!--<br/>
-  	EXPLAIN THAT IDEA      -->
-  	</div>
-  	<br/>
-  	<div id="frames">
-  	  <!-- frames here -->
+    <div id="wtf">
+    	<div id="so" class="fuck">
+    	<strong class="fuck_subtitle_smaller">Blank Stares Again?</strong>
+    	<strong class="fuck_subtitle">Still Don't Understand?</strong><!--<br/>
+    	EXPLAIN THAT IDEA -->
+    	</div>
+    	<br/>
+    	<div id="frames">
+        <span class="left-corner"></span>
+        <span class="right-corner"></span>
+    	  <!-- frames here -->
 
-  	</div>
+    	<br/>
+
+    	</div>
 
 
-
-
-</div>
- </div>
-  <div id="share_this">Share This! &nbsp;<a href="http://twitter.com/explainthatidea" target="_blank" id="twitter_link"><img src="images/twitter.png" alt="Twitter"/></a> <div id="fb-adjust"><div class="fb-like" data-href="http://facebook.com/artofexplanation" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="lucida grande"></div></div><!--<a href="#" id="facebook_link"><img src="images/facebook.png" alt="Facebook"></a> <!-- <a href="#"><img src="images/g.png" alt="G"></a> <a href="#"><img src="images/amazon.png" alt="Get it on Amazon"></a> --></div>
+  </div>
+  </div>
+  <div id="share_this" class="footer">Share This! &nbsp;<a href="http://twitter.com/explainthatidea" target="_blank" id="twitter_link"><img src="images/twitter.png" alt="Twitter"/></a> <div id="fb-adjust"><div class="fb-like" data-href="http://facebook.com/artofexplanation" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="lucida grande"></div></div><!--<a href="#" id="facebook_link"><img src="images/facebook.png" alt="Facebook"></a> <!-- <a href="#"><img src="images/g.png" alt="G"></a> <a href="#"><img src="images/amazon.png" alt="Get it on Amazon"></a> --></div>
   <div class="push">
+
   </div>
 </div>
-<!-- end wrapper -->
 
 <div class="footer">
-  <div id="share" class="clearfix">
-    	<div id="links">
-  			<a href="http://artofexplanation.com/book/art-of-explanation-buy"><img src="images/book-cover.png" alt="The Art of Explanation"/></a>
-  			<span>Want more?</span>
-  			<a href="http://artofexplanation.com/book/art-of-explanation-buy" id="buy_more">Buy the book</a>
-        <span class="right-copy">&copy; 2012 <a href="http://www.commoncraft.com/">Common Craft</a> | <a href="http://bit.ly/ccets">NSFW Version</a></span>
-  		</div>
-  		<div class="wrap">
-    		<div id="copyright_box">
-    		&copy; 2012 <a href="http://www.commoncraft.com/">Common Craft</a> | <a href="http://bit.ly/ccets">NSFW Version</a> &nbsp; </div>
-    	</div>
-  </div>
-</div>
 
+
+<div id="share" class="clearfix">
+	<div id="links">
+			<a href="http://artofexplanation.com/book/art-of-explanation-buy"><img src="images/book-cover.png" alt="The Art of Explanation"/></a>
+			<span>Want more?</span>
+			<a href="http://artofexplanation.com/book/art-of-explanation-buy" id="buy_more">Buy the book</a>
+      <span class="right-copy">&copy; 2012 <a href="http://www.commoncraft.com/">Common Craft</a> | <a href="http://bit.ly/ccets">NSFW Version</a></span>
+		</div>
+		<div class="wrap">
+		<div id="copyright_box">
+		&copy; 2012 <a href="http://www.commoncraft.com/">Common Craft</a> | <a href="http://bit.ly/ccets">NSFW Version</a> &nbsp; </div>
+	</div>
+</div>
+</div>
 
 <script src="jquery-1.8.1.min.js"></script>
 <script src="mustache.js"></script>
@@ -87,90 +88,99 @@
 
 <script type="text/html" id="frame_template">
   <div class="frame future">
-    <div class="text"><img src="images/illustrations/{{illustrations}}" alt="Guy With Bulb">{{text}}
+    <div class="text" id="{{anchor}}"><img src="images/illustrations/{{illustrations}}" alt="Guy With Bulb"/>{{text}}
     </div>
     <div class="footnote"><a href="{{footnote}}">{{footnote}}</a></div>
     <div class="bfd">
   		<a href="javascript:void(0);" class="quip">{{quip}}</a>
   	</div>
+
   </div>
+
 </script>
 
 <script>
 $("#twitter_link").on('click',function(){
-	newlink = 'http://twitter.com/intent/tweet?url=http://bit.ly/cceti&text=\"'
+	newlink = 'http://twitter.com/intent/tweet?url=http://bit.ly/cceti%23'
+	newlink += $('.text').attr('id')
+	newlink += '&text=\"'
 	newlink += encodeURIComponent($('.text').text().trim())
 	newlink += '\" via: '
 	$(this).attr('href', newlink)
 });
 
 $("#facebook_link").on('click',function(){
-	newlink = 'http://www.facebook.com/sharer.php?u=http://www.explainthatidea.com&t='
+	newlink = 'http://www.facebook.com/sharer.php?u=http://www.explainthatidea.com%23'
+	newlink += $('.text').attr('id')
+	newlink += '&t='
 	newlink += encodeURIComponent($('.text').text().trim())
 	newlink += '\" via: '
 	$(this).attr('href', newlink)
 });
+
+
+
 </script>
 
 <script type="text/javascript">
 
 var text = [];
-    text[1] = "Taking the time to learn new ideas is expensive. Your explanation should make learning cheap.";
-  text[2] = "Your explanation should make people feel confident. Without confidence, no one will care.";
-  text[3] = "Build context - it's the world where your ideas live. Start with the forest and then talk about the trees.";
-  text[4] = "Make connections to things the audience already understands. Show them how X is like Y with a few differences.";
-  text[5] = "Stop trying to look like a smartypants and start helping people feel confident.";
-  text[6] = "Facts are not enough. Show how a person experiences and learns about the facts to make it an explanation.";
-  text[7] = "Empathize. Imagine your explanation in another person's shoes. Just hope they're comfortable.";
-  text[8] = "Don't assume people know what you know. They don't. Give them a way to catch up quickly.";
-  text[9] = "Impress experts not with your depth of knowledge, but how broadly you can apply it.";
-  text[10] = "Start with points that help set the stage for your ideas. Come to agreement early and often.";
-  text[11] = "If your intent is to explain something, make your intentions known. Show them you're going to solve a problem.";
-  text[12] = "The best thing you can do is make people care about things you say. Explanations can make people care.";
-  text[13] = "Think of your explanation as a package of ideas that's designed to blow people's minds with clarity.";
-  text[14] = "Taking the time to learn new things is expensive. Your explanation should make that stuff cheap.";
-  text[15] = "Keep it short.";
-  text[16] = "Consider every word you use in an explanation. A single word can mess it up.";
-  text[17] = "Your explanation should make people feel confident. Without confidence, no one will care.";
-  text[18] = "Zoom out. Look at your ideas from the clouds first. Then zoom in slowly, like a skydiver.";
-  text[19] = "The Curse of Knowledge makes hard to imagine NOT knowing what you know. You must empathize to lift the curse.";
-  text[20] = "Stories work. Adding a person's experience to your explanation makes it more like a story.";
-  text[21] = "Plan your explanation ahead of time. Consider your audience and what will make them feel like smart.";
-  text[22] = "When explaining something, remember to put the 'why' before the 'how', like the salt before the tequila.";
-  text[23] = "Explanation is a skill. It can be learned. The first step is to realize that this is possible.";
-  text[24] = "Fact-telling sucks. Storytelling is what helps people remember your ideas and explanations.  ";
-  text[25] = "Explanations make facts and ideas understandable. But if you can inspire and motivate too - that's the bomb.";
-  text[26] = "Explanations clarify and describe facts. It's all about helping people see that stuff from a new perspective.";
-  text[27] = "Explanation is an art, we all do it differently and that makes it creative and awesome.";
-  text[28] = "Get this. Studies have shown that explaining ideas can benefit the explainer more than the explainee.";
-  text[29] = "When someone asks 'What is X?' Answer as if they asked 'Why should I care about X?'";
-  text[30] = "Explanations affect confidence. Good ones build it, poor ones take it away.";
-  text[31] = "The best explanations start as a written document, like a script for a movie or rap lyrics.";
-  text[32] = "Context creates a foundation for other ideas. Without it, ideas are homeless & hungry. Feed them context.";
-  text[33] = "In introducing a new idea, show how the idea takes away pain. Make them say 'I know that feeling!'";
-  text[34] = "Check it: Facts give stories substance. Stories give facts meaning. Explanations need both.";
-  text[35] = "Analogy is powerful. Use it well and you'll see light bulbs turn on.";
-  text[36] = "Be willing to trade understanding for technical accuracy at first. But get a good deal.";
-  text[37] = "Constrain yourself. Design your explanation within the limits of how it'll be used. Lose the handcuffs though.";
-  text[38] = "Focus on 2-3 big ideas. No one is going to remember half the stuff you say anyway. ";
-  text[39] = "Start building explanation skills by learning to explain what you do for a living & why it matters.";
-  text[40] = "An explanation should answer 'why?' - as in, Why does this make sense? or Why am I sooo good looking?";
-  text[41] = "Like a movie script, a written explanation can be a starting point for some serious multi-media experiences.";
-  text[42] = "Sometimes the big thing keeping ideas from being adopted isn't features, value or design, but explanation.";
-  text[43] = "Have fun with explanations. Take risks, use humor and make people smile.";
-  text[44] = "Slow down. Take deep breaths. Add emphasis by saying important...stuff...slowly.";
-  text[45] = "Visuals and media can make your explanation shine. Experiment with ways to blow peoples' minds.";
-  text[46] = "In presenting an explanation, simple drawings can do the trick. You don't have to be Da Vinci or Bob Ross.";
-  text[47] = "You can become a new kind of wizard in your organization - an explanation wizard, a specialist.";
-  text[48] = "You take explanation for granted. It's time to take a step back and see what's really possible.";
-  text[49] = "You can become an ambassador for your profession by finding ways to explain it better - and make people care.";
-  text[50] = "You really have to understand what you're explaining. Learn the facts, then get creative. ";
-  text[51] = "Einstein once said 'If you can’t explain it simply, you don’t understand it well enough.' Good stuff.";
-  text[51] = "Explanations are like driving directions. Image what it's like to approach a location for the FIRST time.";
-  text[52] = "In the future, companies will compete on who can explain their stuff the best. You can help."
-  text[53] = "Don't let your best explanations disappear into the ether. Record it and it may live forever.";
-  text[54] = "You work inside a bubble. Remember that your explanation has to make sense outside of it.";
-  text[55] = "Explanations aren't enough. If you want to really shine, find ways to make them remarkable.";
+  text[1]  = "cheap|Taking the time to learn new ideas is expensive. Your explanation should make learning cheap.";
+  text[2]  = "confident|Your explanation should make people feel confident. Without confidence, no one will care.";
+  text[3]  = "context|Build context - it's the world where your ideas live. Start with the forest and then talk about the trees.";
+  text[4]  = "connections|Make connections to things the audience already understands. Show them how X is like Y with a few differences.";
+  text[5]  = "smartypants|Stop trying to look like a smartypants and start helping people feel confident.";
+  text[6]  = "facts|Facts are not enough. Show how a person experiences and learns about the facts to make it an explanation.";
+  text[7]  = "empathize|Empathize. Imagine your explanation in another person's shoes. Just hope they're comfortable.";
+  text[8]  = "assume|Don't assume people know what you know. They don't. Give them a way to catch up quickly.";
+  text[9]  = "impress|Impress experts not with your depth of knowledge, but how broadly you can apply it.";
+  text[10] = "start|Start with points that help set the stage for your ideas. Come to agreement early and often.";
+  text[11] = "intent|If your intent is to explain something, make your intentions known. Show them you're going to solve a problem.";
+  text[12] = "care|The best thing you can do is make people care about things you say. Explanations can make people care.";
+  text[13] = "package|Think of your explanation as a package of ideas that's designed to blow people's minds with clarity.";
+  text[14] = "cheap|Taking the time to learn new things is expensive. Your explanation should make that stuff cheap.";
+  text[15] = "short|Keep it short.";
+  text[16] = "single|Consider every word you use in an explanation. A single word can mess it up.";
+  text[17] = "confident|Your explanation should make people feel confident. Without confidence, no one will care.";
+  text[18] = "zoom|Zoom out. Look at your ideas from the clouds first. Then zoom in slowly, like a skydiver.";
+  text[19] = "curse|The Curse of Knowledge makes hard to imagine NOT knowing what you know. You must empathize to lift the curse.";
+  text[20] = "stories|Stories work. Adding a person's experience to your explanation makes it more like a story.";
+  text[21] = "plan|Plan your explanation ahead of time. Consider your audience and what will make them feel like smart.";
+  text[22] = "why|When explaining something, remember to put the 'why' before the 'how', like the salt before the tequila.";
+  text[23] = "skill|Explanation is a skill. It can be learned. The first step is to realize that this is possible.";
+  text[24] = "telling|Fact-telling sucks. Storytelling is what helps people remember your ideas and explanations.  ";
+  text[25] = "motivate|Explanations make facts and ideas understandable. But if you can inspire and motivate too - that's the bomb.";
+  text[26] = "clarify|Explanations clarify and describe facts. It's all about helping people see that stuff from a new perspective.";
+  text[27] = "art|Explanation is an art, we all do it differently and that makes it creative and awesome.";
+  text[28] = "studies|Get this. Studies have shown that explaining ideas can benefit the explainer more than the explainee.";
+  text[29] = "answer|When someone asks 'What is X?' Answer as if they asked 'Why should I care about X?'";
+  text[30] = "build|Explanations affect confidence. Good ones build it, poor ones take it away.";
+  text[31] = "written|The best explanations start as a written document, like a script for a movie or rap lyrics.";
+  text[32] = "foundation|Context creates a foundation for other ideas. Without it, ideas are homeless & hungry. Feed them context.";
+  text[33] = "idea|In introducing a new idea, show how the idea takes away pain. Make them say 'I know that feeling!'";
+  text[34] = "check|Check it: Facts give stories substance. Stories give facts meaning. Explanations need both.";
+  text[35] = "analogy|Analogy is powerful. Use it well and you'll see light bulbs turn on.";
+  text[36] = "trade|Be willing to trade understanding for technical accuracy at first. But get a good deal.";
+  text[37] = "constrain|Constrain yourself. Design your explanation within the limits of how it'll be used. Lose the handcuffs though.";
+  text[38] = "focus|Focus on 2-3 big ideas. No one is going to remember half the stuff you say anyway. ";
+  text[39] = "learning|Start building explanation skills by learning to explain what you do for a living & why it matters.";
+  text[40] = "good-looking|An explanation should answer 'why?' - as in, Why does this make sense? or Why am I sooo good looking?";
+  text[41] = "movie|Like a movie script, a written explanation can be a starting point for some serious multi-media experiences.";
+  text[42] = "big-thing|Sometimes the big thing keeping ideas from being adopted isn't features, value or design, but explanation.";
+  text[43] = "fun|Have fun with explanations. Take risks, use humor and make people smile.";
+  text[44] = "slow|Slow down. Take deep breaths. Add emphasis by saying important...stuff...slowly.";
+  text[45] = "visuals|Visuals and media can make your explanation shine. Experiment with ways to blow peoples' minds.";
+  text[46] = "explanation|In presenting an explanation, simple drawings can do the trick. You don't have to be Da Vinci or Bob Ross.";
+  text[47] = "wizard|You can become a new kind of wizard in your organization - an explanation wizard, a specialist.";
+  text[48] = "step-back|You take explanation for granted. It's time to take a step back and see what's really possible.";
+  text[49] = "ambassador|You can become an ambassador for your profession by finding ways to explain it better - and make people care.";
+  text[50] = "prerequisite|You really have to understand what you're explaining. Learn the facts, then get creative. ";
+  text[51] = "einstein|Einstein once said 'If you can’t explain it simply, you don’t understand it well enough.' Good stuff.";
+  text[51] = "directions|Explanations are like driving directions. Image what it's like to approach a location for the FIRST time.";
+  text[52] = "future|In the future, companies will compete on who can explain their stuff the best. You can help.";
+  text[53] = "record|Don't let your best explanations disappear into the ether. Record it and it may live forever.";
+  text[54] = "bubble|You work inside a bubble. Remember that your explanation has to make sense outside of it.";
+  text[55] = "remarkable|Explanations aren't enough. If you want to really shine, find ways to make them remarkable.";
 
 
 var subtitles =[];
@@ -185,7 +195,7 @@ var footnotes = [];
 
 var quips = [];
   quips[0] = "What Else?";
-  quips[1] = "Is That It?";
+  quips[1] = "Is There More?";
   quips[2] = "Don't Stop Now.";
   quips[3] = "I've Got The Feeling!";
   quips[4] = "Keep It Rolling...";
@@ -240,6 +250,7 @@ var illustrations = [];
     //illustrations[0] = "tree-color.png";
     illustrations[31] = "waist17.png";
 
+
 </script>
 
 
@@ -251,12 +262,29 @@ $(function(){
   var $current, $old;
   var frame_template = $('#frame_template').html();
 
-  function next_frame(){
+  function next_frame(hash){
+  	// if the URL contains a hash and that's passed to the function, look for that item. Otherwise, use random cursor
+  	if (hash != undefined) {
+  		for (var i = 1; i < text.length; i++) {
+			// on the first match of the hash, set the cursor and exit
+			if (text[i].substring(0,hash.length) == hash) {
+				cursor = i;
+				break;
+			}
+		}
+  	}
+  	// if nothing matches, the default cursor stays
+  	
     $old = $($current);
 
     // set up next frame
+    splittext = text[cursor].split('|'); // split up the text to grab the anchor
+    anchor    = splittext.shift();   // grab the first item
+    fixedtext = splittext.join('|') ;  // re-join the rest
+    
     $current = $(Mustache.render(frame_template, {
-      text: text[cursor],
+      anchor: anchor,
+      text: fixedtext,
       footnote: footnotes[cursor],
       illustrations: illustrations[Math.floor(Math.random()*illustrations.length)],
       quip: quips[Math.floor(Math.random()*quips.length)]
@@ -277,9 +305,11 @@ $(function(){
 
   $('#frames').delegate('a.quip', 'click', function(){
     next_frame();
+    set_frame_height();
   });
 
-  next_frame();
+  // on initial load, look for the hash
+  next_frame(window.location.hash.replace("#", ""));
 });
 </script>
 
@@ -298,6 +328,6 @@ $(function(){
   })();
 
 </script>
-</div>
+
 </body>
 </html>

@@ -21,13 +21,13 @@
 
 	<title>Explain That Idea</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-	<link href='./css/style.css' rel='stylesheet' type='text/css'>
+	<link href='./css/style.css' rel='stylesheet' type='text/css' />
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="ets_favicon.ico" />
 
 </head>
 <body>
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
+<script type="text/javascript">(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
@@ -80,15 +80,15 @@
 </div>
 </div>
 
-<script src="jquery-1.8.1.min.js"></script>
-<script src="mustache.js"></script>
-<script src="modernizr.js"></script>
+<script type="text/javascript" src="jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="mustache.js"></script>
+<script type="text/javascript" src="modernizr.js"></script>
 <script type="text/javascript" src="jquery.touchSwipe.min.js"></script>
 <script type="text/javascript" src="functions.js"></script>
 
 <script type="text/html" id="frame_template">
   <div class="frame future">
-    <div class="text" id="{{anchor}}"><img src="images/illustrations/{{illustrations}}" alt="Guy With Bulb"/>{{text}}
+    <div class="text" data-id="{{anchor}}"><img src="images/illustrations/{{illustrations}}" alt="Guy With Bulb"/>{{text}}
     </div>
     <div class="footnote"><a href="{{footnote}}">{{footnote}}</a></div>
     <div class="bfd">
@@ -99,10 +99,10 @@
 
 </script>
 
-<script>
+<script type="text/javascript">
 $("#twitter_link").on('click',function(){
 	newlink = 'http://twitter.com/intent/tweet?url=http://bit.ly/cceti%23'
-	newlink += $('.text').attr('id')
+	newlink += $('.text').attr('data-id')
 	newlink += '&text=\"'
 	newlink += encodeURIComponent($('.text').text().trim())
 	newlink += '\" via: '
@@ -111,7 +111,7 @@ $("#twitter_link").on('click',function(){
 
 $("#facebook_link").on('click',function(){
 	newlink = 'http://www.facebook.com/sharer.php?u=http://www.explainthatidea.com%23'
-	newlink += $('.text').attr('id')
+	newlink += $('.text').attr('data-id')
 	newlink += '&t='
 	newlink += encodeURIComponent($('.text').text().trim())
 	newlink += '\" via: '

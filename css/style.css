@@ -448,7 +448,7 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */ }
   #frames div.frame div.text { text-align:left; line-height:18px; font-size:15px;  }
   .bfd a { width:90%;  margin-left:5%; margin-right:5%;  font-size:17px;  }
    #copyright_box { display:none; }
-   #share_this { margin:13px auto !important; padding-left:90px; }
+   #share_this { margin:13px auto 100px !important; padding-left:90px; }
     .wrapper {
     overflow: visible;
     min-height: 1px !important;
